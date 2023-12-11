@@ -1,0 +1,94 @@
+
+.body{
+    background-color: grey;
+}
+
+.jeu{ /* je pense pas l'utiliser à voir*/
+/* display: flex;
+align-items: center;
+justify-content: center;
+border: solid black 1px;
+background-color: rgb(170, 101, 101); */
+}
+
+img{
+    width: 300px;
+    height: 350px;
+    /* border: 5px black solid; */
+    border-radius: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.titre{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.difficuterDeJeu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnDifficulter{
+    width: 100px;
+    height: 50px;
+    /* border: 5px black solid; */
+    border-radius: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+
+.tableauDesScores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divDispositionDifficulterFacile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* .plateauDeJeuDifficulterFacile{
+    display: flex;
+} */
+
+
+/* Pour là partie FACILE (! voir si je vais pas le séparer pour les autre difficulter)*/
+
+/* la personne existe pour le moment */
+.dosDeCarteFacile{
+    display: none; 
+}
+
+.devantDeCarteFacile{
+    display: none;
+}
+
+
+
+/* img[src$="dosDeCarte.jpeg"] {
+}
+
+img[src$="img1.difficulterFacile.jpeg"] {
+} */
+
