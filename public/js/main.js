@@ -16,6 +16,20 @@ for (let i = 0; i < devantDeCarteFacileAll.length; i++) {
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+let dosDeCarteFacileAll = document.querySelectorAll(".dosDeCarteFacile")
 
+let btnAll = document.querySelectorAll("button")
+
+let btnFacile = btnAll[0]
+console.log(btnFacile);
+
+// // temporairement pas utiliser
+// let btnNormal=btnAll[1]
+// console.log(btnNormal);
+// let btnDifficile=btnAll[2]
+// console.log(btnDifficile);
+// // 
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
