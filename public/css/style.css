@@ -92,3 +92,25 @@ img{
 img[src$="img1.difficulterFacile.jpeg"] {
 } */
 
+
+/* générale */
+.none{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
+
+
+
+/*                 
+                    if (tabStockerVariable[0].style.border=="red 2px solid" && tabStockerVariable[1].style.border=="red 2px solid") {
+                        tabStockerDos[0].style.display="flex"
+                        tabStockerDos[1].style.display="flex"
+                        tabStockerVariable[0].style.display="none"
+                        tabStockerVariable[1].style.display="none"
+                        alert(`omg`)
+                    } */
