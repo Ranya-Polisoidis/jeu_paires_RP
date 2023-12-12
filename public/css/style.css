@@ -1,6 +1,12 @@
 
-.body{
-    background-color: grey;
+body{
+    background-color:rgb(128, 128, 128);
+    background-image: url(../img/fondDePage.jpeg);
+    background-size:cover;
+    background-position: center;
+    background-attachment:fixed;
+    margin:0;
+    padding:0;
 }
 
 .jeu{ /* je pense pas l'utiliser à voir*/
@@ -16,49 +22,104 @@ img{
     height: 350px;
     /* border: 5px black solid; */
     border-radius: 20px;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
+/* titre */
 .titre{
-    font-size: 40px;
+    color:rgb(45, 19, 5);
+    font-size: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* margin-right: 10px;
-    margin-left: 10px; */
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
-.difficuterDeJeu{
+/* nom d'utilisateur */
+.nomDutilisateur{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.inputNomDutilisateur{
+    color:"#6c3f26";
+    font-size: 20px;
+    border-radius: 20px;
+    width:220px;
+
+    height: 50px;
+    border-radius: 20px;
+    background-color: #6c3f26;   
+    border:#6c3f26 solid;
+
+    /* margin:0 */
+    margin-right: 20px;
+}
+
+.inputNomDutilisateur::placeholder {
+    color: #6c3f26ad; 
+    font-style: italic; 
+}
+
+.btnNomDutilisateur{
+    color:#b1470e;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #6c3f26;   
+    border: #6c3f267b;
+
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    
+}
+
+
+/* tableau des scores */
+.tableauDesScores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.h1TableauDesScores{
+    color:rgb(170, 115, 48);
+    display: none;
+    margin-bottom:0;
+    font-size: 50px;
+
+}
+
+/* difficuter de jeu */
+.difficuterDeJeu{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
 }
 
 .btnDifficulter{
-    width: 100px;
+    color:#994a1cd0;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #381c0ddc;
+    border: #4e28137a;
+
+    width: 150px;
     height: 50px;
-    /* border: 5px black solid; */
     border-radius: 20px;
     margin-right: 15px;
     margin-left: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
-
 }
 
 
-.tableauDesScores{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* plateau de jeu: difficulter facile */
 .divDispositionDifficulterFacile{
     display: flex;
     align-items: center;
@@ -93,7 +154,7 @@ img[src$="img1.difficulterFacile.jpeg"] {
 } */
 
 
-/* générale */
+/* pour tout le monde: générale */
 .none{
     display: none;
 }
@@ -114,3 +175,61 @@ img[src$="img1.difficulterFacile.jpeg"] {
                         tabStockerVariable[1].style.display="none"
                         alert(`omg`)
                     } */
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+} */
+
+#divChrono {
+    /* padding: 100px; */
+    border-radius: 30px;
+    /* font-size: 10px; */
+    background-color: rgb(170, 115, 48);
+    width: 500px;
+    /* width: 350px; // ou alors  */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#chrono {
+    /* text-align: center; */
+    font-size: 50px;
+    /* margin-bottom: 30px; */
+    color:#381c0d
+
+}
+
+/* button {
+    font-size: 25px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+} */
+
+/* button:not(:last-child) {
+    margin-right: 15px;
+}
+
+button:nth-child(2) {
+    background-color: #dfdfdf;
+}
+
+button:last-child {
+    background-color: #3a6eff;
+    color: white;
+} */

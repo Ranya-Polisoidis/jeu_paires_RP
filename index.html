@@ -1,15 +1,15 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> jeu paires RP</title>
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
+
 <body>
-    
+
     <section>
 
         <div class="jeu">
@@ -20,6 +20,51 @@
                 <div class="titre">
 
                     <h1>Jeu de Paires</h1>
+                </div>
+
+            </div>
+
+            <!-- nom d'utilisateur -->
+            <div>
+
+                <div class="nomDutilisateur">
+
+                    <input class="inputNomDutilisateur" type="text" placeholder="pseudo">
+                    <button class="btnNomDutilisateur">Go</button>
+
+                </div>
+
+            </div>
+
+            <!-- tableau des scores -->
+            <div>
+
+                <div class="tableauDesScores">
+
+                    <h1 class="h1TableauDesScores">Tableau des scores</h1>
+
+                    <h3></h3>
+                    
+                    <!-- de base -->
+                    <!-- <div id="wrapper">
+                        <div id="chrono">00:00:00</div>
+                        <div id="buttons">
+                            <button id="reset" class="button">Reset</button>
+                            <button id="stop" class="button">Arrêter</button>
+                            <button id="start" class="button">Démarrer</button>
+                        </div>
+                    </div> -->
+
+                    <!-- transformer wrapper -->
+                    <div id="divChrono">
+                        <div id="chrono">00:00:00</div>
+                        <div id="buttons">
+                            <!-- <button id="reset" class="button">Reset</button>
+                            <button id="stop" class="button">Arrêter</button>
+                            <button id="start" class="button">Démarrer</button> -->
+                        </div>
+                    </div>
+
 
                 </div>
 
@@ -28,9 +73,9 @@
 
             <!-- difficuter de jeu -->
             <div>
-                
+
                 <div class="difficuterDeJeu">
-                    
+
                     <div>
                         <button class="btnDifficulter">Facile</button>
                     </div>
@@ -40,7 +85,7 @@
                     <div>
                         <button class="btnDifficulter">Normal</button>
                     </div>
-                    
+
                     <div>
                         <button class="btnDifficulter">Difficile</button>
                     </div>
@@ -51,20 +96,8 @@
             </div>
 
 
-            <!-- tableau des scores -->
-            <div>
-
-                <div class="tableauDesScores">
-                    
-                    <!-- voir consigne quoi mettre -->
-
-                </div>
-
-            </div>
-
-
             <!-- plateau de jeu: difficulter facile -->
-            <div >
+            <div>
 
                 <div class="plateauDeJeuDifficulterFacile">
 
@@ -83,7 +116,7 @@
                             <img class="devantDeCarteFacile" src="" alt="">
                         </div>
                     </div>
-        
+
                     <div class="divDispositionDifficulterFacile">
                         <div>
                             <img class="dosDeCarteFacile" src="./public/img/dosDeCarte.jpeg" alt="">
@@ -113,10 +146,13 @@
         </div>
 
 
+
+
     </section>
 
     <script src="./public/js/main.js"></script>
 
 
 </body>
+
 </html>
