@@ -14,6 +14,7 @@ for (let i = 0; i < devantDeCarteFacileAll.length; i++) {
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 let dosDeCarteFacileAll = document.querySelectorAll(".dosDeCarteFacile")
 
 let input1 = document.querySelector("input")
@@ -25,7 +26,8 @@ let btnGO = btnAll[0]
 // pour faire des ajouts a chaque fois des joueurs
 let h2TableauDesScoresAll=document.querySelectorAll("h2")
 let h2TableauDesScores1=h2TableauDesScoresAll[0]
-
+let h2TableauDesScores2=h2TableauDesScoresAll[1]
+let h2TableauDesScores3=h2TableauDesScoresAll[2]
 // 
 
 
@@ -76,9 +78,27 @@ let h3ChronoNew
 
 btnFacile.addEventListener("click", function () {
 
+    h3ChronoNew= document.createElement("h3")
+    let texteH3ChronoNew= document.createTextNode("00:00:00")
+    h3ChronoNew.id="chrono"
+    // h3ChronoNew.setAttribute("id", "chrono");
 
+    
+    h3ChronoNew.appendChild(texteH3ChronoNew)
+    h2TableauDesScores2.appendChild(h3ChronoNew)
+    h3ChronoNew.style.color="#d65915"
+    h3ChronoNew.style.color="#d65915"
+    h3ChronoNew.style.fontSize="35px"
+    h3ChronoNew.style.margin="0"
+    h3ChronoNew.style.padding="0"
+
+    h3ChronoNew.style.textAlign="center"
     demarrer()
     
+
+    
+    h3NiveauNew.style.textAlign="center"
+
 
     difficuterDeJeu.style.display = "none"
 
