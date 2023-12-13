@@ -43,6 +43,8 @@ btnGO.addEventListener("click", function () {
 
     tableauDesScores.style.display = "flex"
     difficuterDeJeu.style.display = "flex"
+    input1.style.display="flex"
+    btnGO.style.display="block"
 
     let h3PseudoNew = document.createElement("h3")
     let vP = input1.value
@@ -50,11 +52,14 @@ btnGO.addEventListener("click", function () {
     let texteH3PseudoNew = document.createTextNode("")
     h3PseudoNew.appendChild(texteH3PseudoNew)
     h2TableauDesScores1.appendChild(h3PseudoNew)
-    h3PseudoNew.style.color = "#d65915"
-    h3PseudoNew.style.color = "#d65915"
+    h3PseudoNew.style.color = "#e7ab7d"
+    h3PseudoNew.style.color = "#e7ab7d"
     h3PseudoNew.style.fontSize = "35px"
     h3PseudoNew.style.margin = "0"
     h3PseudoNew.style.padding = "0"
+    h3PseudoNew.style.display = "flex"
+    h3PseudoNew.style.alignItems = "center"
+    h3PseudoNew.style.justifyContent = "center"
 
     h3PseudoNew.style.textAlign = "center"
 })
@@ -125,15 +130,18 @@ btnFacile.addEventListener("click", function () {
     let texteH3ChronoNew = document.createTextNode("") // j'ai crée son emplacement dont j'ai intégrer dans ma fonction (car si je le fais ici il aura 0:0:0 mais là bah sa va fonctionner)
     h3ChronoNew.appendChild(texteH3ChronoNew)
     h2TableauDesScores2.appendChild(h3ChronoNew)
-    h3ChronoNew.style.color = "#d65915"
-    h3ChronoNew.style.color = "#d65915"
+    h3ChronoNew.style.color = "#e7ab7d"
+    h3ChronoNew.style.color = "#e7ab7d"
     h3ChronoNew.style.fontSize = "35px"
     h3ChronoNew.style.margin = "0"
     h3ChronoNew.style.padding = "0"
+    h3ChronoNew.style.display = "flex"
+    h3ChronoNew.style.alignItems = "center"
+    h3ChronoNew.style.justifyContent = "center"
 
     h3ChronoNew.style.textAlign = "center"
 
-    
+
     // activation de mon chrono
     monIntervalChrono=setInterval(fctChrono, 1000);  // je lui est doner un nom car ici je l'active mais je veux une fin donc je la clear là où je souhaite (+bas)
 
@@ -143,16 +151,21 @@ btnFacile.addEventListener("click", function () {
     let texteH3NiveauNew = document.createTextNode("Facile")
     h3NiveauNew.appendChild(texteH3NiveauNew)
     h2TableauDesScores3.appendChild(h3NiveauNew)
-    h3NiveauNew.style.color = "#d65915"
-    h3NiveauNew.style.color = "#d65915"
+    h3NiveauNew.style.color = "#e7ab7d"
+    h3NiveauNew.style.color = "#e7ab7d"
     h3NiveauNew.style.fontSize = "35px"
     h3NiveauNew.style.margin = "0"
     h3NiveauNew.style.padding = "0"
+    h3NiveauNew.style.display = "flex"
+    h3NiveauNew.style.alignItems = "center"
+    h3NiveauNew.style.justifyContent = "center"
 
     h3NiveauNew.style.textAlign = "center"
 
 
     difficuterDeJeu.style.display = "none"
+    input1.style.display="none"
+    btnGO.style.display="none"
 
 
     dosDeCarteFacileAll.forEach(element => {
@@ -231,6 +244,8 @@ dosDeCarteFacileAll.forEach(element => {
                             element.style.display = "none"
                         });
                         difficuterDeJeu.style.display = "none"
+                        input1.style.display="flex"
+                        btnGO.style.display="block"
 
                     }, 1000)
                 }

@@ -1,7 +1,6 @@
 
 body{
-    background-color:rgb(94, 88, 88);
-    /* background-image: url(../img/fondDePage.jpeg); */
+    /* background-color:#C69774; */
     background-size:cover;
     background-position: center;
     background-attachment:fixed;
@@ -22,7 +21,7 @@ img{
 
 /* titre */
 .titre{
-    color:rgb(45, 19, 5);
+    color:#381c0de8;
     font-size: 100px;
     display: flex;
     align-items: center;
@@ -37,7 +36,7 @@ img{
 }
 
 .inputNomDutilisateur{
-    color:#d65915;
+    color:#e7ab7d;
     font-size: 30px;
     font-weight: bold;
     outline: none;
@@ -54,13 +53,13 @@ img{
 }
 
 .inputNomDutilisateur::placeholder {
-    color: #ce5514ad; 
+    color: #e7ab7d99; 
     font-size: 30px;
     font-style: italic; 
 }
 
 .btnNomDutilisateur{
-    color:#c04d0f;
+    color:#e7ab7d;
     font-weight: bold;
     font-size: 40px;
     background-color: #6c3f26;   
@@ -100,6 +99,12 @@ img{
 .h2TableauDesScoresAll{
     color:#381c0d;
     font-size: 40px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 
@@ -111,7 +116,7 @@ img{
 }
 
 .btnDifficulter{
-    color:#994a1cd0;
+    color:#e7ab7dce;
     font-weight: bold;
     font-size: 40px;
     background-color: #381c0ddc;
