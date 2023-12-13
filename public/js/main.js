@@ -24,36 +24,43 @@ let btnAll = document.querySelectorAll("button")
 let btnGO = btnAll[0]
 
 // pour faire des ajouts a chaque fois des joueurs
-let h2TableauDesScoresAll=document.querySelectorAll("h2")
-let h2TableauDesScores1=h2TableauDesScoresAll[0]
-let h2TableauDesScores2=h2TableauDesScoresAll[1]
-let h2TableauDesScores3=h2TableauDesScoresAll[2]
+let h2TableauDesScoresAll = document.querySelectorAll("h2")
+let h2TableauDesScores1 = h2TableauDesScoresAll[0]
+let h2TableauDesScores2 = h2TableauDesScoresAll[1]
+let h2TableauDesScores3 = h2TableauDesScoresAll[2]
 // 
 
 
-let tableauDesScores=document.querySelector(".tableauDesScores")
+let tableauDesScores = document.querySelector(".tableauDesScores")
 let difficuterDeJeu = document.querySelector(".difficuterDeJeu")
+let btnRESTART = document.querySelector(".btnRESTART")
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 btnGO.addEventListener("click", function () {
 
-    tableauDesScores.style.display="flex"
+    tableauDesScores.style.display = "flex"
     difficuterDeJeu.style.display = "flex"
 
-    let h3PseudoNew= document.createElement("h3")
+    let h3PseudoNew = document.createElement("h3")
     let vP = input1.value
     h3PseudoNew.innerHTML = vP;
-    let texteH3PseudoNew= document.createTextNode("")
+    let texteH3PseudoNew = document.createTextNode("")
     h3PseudoNew.appendChild(texteH3PseudoNew)
     h2TableauDesScores1.appendChild(h3PseudoNew)
-    h3PseudoNew.style.color="#d65915"
-    h3PseudoNew.style.color="#d65915"
-    h3PseudoNew.style.fontSize="35px"
-    h3PseudoNew.style.margin="0"
-    h3PseudoNew.style.padding="0"
+    h3PseudoNew.style.color = "#d65915"
+    h3PseudoNew.style.color = "#d65915"
+    h3PseudoNew.style.fontSize = "35px"
+    h3PseudoNew.style.margin = "0"
+    h3PseudoNew.style.padding = "0"
 
-    h3PseudoNew.style.textAlign="center"
+    h3PseudoNew.style.textAlign = "center"
 })
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 let btnFacile = btnAll[1]
 // console.log(btnFacile);
@@ -71,51 +78,89 @@ let stop = false
 let tabStockerSrc = []
 let tabStockerVariable = []
 
-let compteurRécup6=0
+let compteurRécup6 = 0
 
+let monIntervalChrono
 
-let h3ChronoNew
 
 btnFacile.addEventListener("click", function () {
 
-    h3ChronoNew= document.createElement("h3")
-    let texteH3ChronoNew= document.createTextNode("00:00:00")
-    h3ChronoNew.id="chrono"
-    // h3ChronoNew.setAttribute("id", "chrono");
+    let compteurSeconde = 0
+    let compteurMinute = 0
+    let compteurHeure = 0
 
-    
+    // setInterval(function () {
+
+    // },1000)
+
+    function fctChrono() {
+        compteurSeconde++
+
+        if (compteurSeconde == 60) {
+            compteurSeconde = 0
+            compteurMinute++
+        }
+        if (compteurMinute == 60) {
+            compteurMinute = 0
+            compteurHeure++
+        }
+        if (compteurHeure == 60) {
+            compteurHeure = 0
+        }
+
+        // il fct
+        // console.log(`${compteurHeure}:${compteurMinute}:${compteurSeconde}`);
+        // l'afficher à l'endroit souhaiter 
+        texteH3ChronoNew.textContent = `${compteurHeure}:${compteurMinute}:${compteurSeconde}` // textContent fct ! (innerHTML NON !)
+    }
+
+
+
+    let h3ChronoNew = document.createElement("h3")
+    let texteH3ChronoNew = document.createTextNode("") // j'ai crée son emplacement dont j'ai intégrer dans ma fonction (car si je le fais ici il aura 0:0:0 mais là bah sa va fonctionner)
     h3ChronoNew.appendChild(texteH3ChronoNew)
     h2TableauDesScores2.appendChild(h3ChronoNew)
-    h3ChronoNew.style.color="#d65915"
-    h3ChronoNew.style.color="#d65915"
-    h3ChronoNew.style.fontSize="35px"
-    h3ChronoNew.style.margin="0"
-    h3ChronoNew.style.padding="0"
+    h3ChronoNew.style.color = "#d65915"
+    h3ChronoNew.style.color = "#d65915"
+    h3ChronoNew.style.fontSize = "35px"
+    h3ChronoNew.style.margin = "0"
+    h3ChronoNew.style.padding = "0"
 
-    h3ChronoNew.style.textAlign="center"
-    demarrer()
-    
-    let h3NiveauNew= document.createElement("h3")
-    let texteH3NiveauNew= document.createTextNode("Facile")
+    h3ChronoNew.style.textAlign = "center"
+
+
+    monIntervalChrono=setInterval(fctChrono, 1000);
+
+
+    let h3NiveauNew = document.createElement("h3")
+    let texteH3NiveauNew = document.createTextNode("Facile")
     h3NiveauNew.appendChild(texteH3NiveauNew)
     h2TableauDesScores3.appendChild(h3NiveauNew)
-    h3NiveauNew.style.color="#d65915"
-    h3NiveauNew.style.color="#d65915"
-    h3NiveauNew.style.fontSize="35px"
-    h3NiveauNew.style.margin="0"
-    h3NiveauNew.style.padding="0"
-    
-    h3NiveauNew.style.textAlign="center"
+    h3NiveauNew.style.color = "#d65915"
+    h3NiveauNew.style.color = "#d65915"
+    h3NiveauNew.style.fontSize = "35px"
+    h3NiveauNew.style.margin = "0"
+    h3NiveauNew.style.padding = "0"
+
+    h3NiveauNew.style.textAlign = "center"
 
 
     difficuterDeJeu.style.display = "none"
 
-    
+
     dosDeCarteFacileAll.forEach(element => {
         element.style.display = "flex"
     });
 
+
+    // mon bouton restart pour tout reset
+    // btnRESTART.style.display='flex'
+
 })
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 dosDeCarteFacileAll.forEach(element => {
 
@@ -128,7 +173,7 @@ dosDeCarteFacileAll.forEach(element => {
             console.log(element);
             element.nextElementSibling.style.display = "flex"
 
-            
+
             let stockerSrc = element.nextElementSibling.src
             tabStockerSrc.push(stockerSrc)
             // console.log(tabStockerSrc[0]);
@@ -156,9 +201,9 @@ dosDeCarteFacileAll.forEach(element => {
                 tabStockerVariable.forEach(element => {
                     element.style.border = "#ffe433 20px solid"
                 });
-                compteurRécup6+=2
-                if(compteurRécup6==dosDeCarteFacileAll.length){
-                    setTimeout(()=>{
+                compteurRécup6 += 2
+                if (compteurRécup6 == dosDeCarteFacileAll.length) {
+                    setTimeout(() => {
                         dosDeCarteFacileAll.forEach(element => {
                             element.style.display = "flex"
                         });
@@ -172,21 +217,18 @@ dosDeCarteFacileAll.forEach(element => {
                         stop = false
                         compteur = 0
 
-                        arreter()
-                        console.log(h3ChronoNew);
+                        clearInterval(monIntervalChrono)
 
 
                         // ! de base ici il est en flex
                         // difficuterDeJeu.style.display = "flex"
                         // ! j'ai mis en none puis en dessous 
                         dosDeCarteFacileAll.forEach(element => {
-                            element.style.display="none"
+                            element.style.display = "none"
                         });
                         difficuterDeJeu.style.display = "none"
-                        // return 
-                        
-                        // reset()
-                    },1000) 
+
+                    }, 1000)
                 }
 
             } else {
@@ -204,10 +246,10 @@ dosDeCarteFacileAll.forEach(element => {
             tabStockerSrc = []
             tabStockerVariable = []
             compteur = 0
-            setTimeout(()=>{
+            setTimeout(() => {
                 stop = false
-            },1000)
-            
+            }, 1000)
+
         }
 
     })
@@ -215,88 +257,4 @@ dosDeCarteFacileAll.forEach(element => {
 
 });
 
-
-
-// Chronometre
-// let chrono = document.getElementById("chrono");
-// let resetBtn = document.getElementById("reset");
-// let stopBtn = document.getElementById("stop");
-// let startBtn = document.getElementById("start");
-
-
-let heures = 0;
-let minutes = 0;
-let secondes = 0;
-
-let timeout;
-
-let estArrete = true;
-
-const demarrer = () => {
-    if (estArrete) {
-        estArrete = false;
-        defilerTemps();
-    }
-};
-
-const arreter = () => {
-    if (!estArrete) {
-        estArrete = true;
-        clearTimeout(timeout);
-    }
-};
-
-const defilerTemps = () => {
-    if (estArrete) return;
-
-    secondes = parseInt(secondes);
-    minutes = parseInt(minutes);
-    heures = parseInt(heures);
-
-    secondes++;
-
-    if (secondes == 60) {
-        minutes++;
-        secondes = 0;
-    }
-
-    if (minutes == 60) {
-        heures++;
-        minutes = 0;
-    }
-
-    //   affichage
-    if (secondes < 10) {
-        secondes = "0" + secondes;
-    }
-
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-
-    if (heures < 10) {
-        heures = "0" + heures;
-    }
-
-    chrono.textContent = `${heures}:${minutes}:${secondes}`;
-
-    timeout = setTimeout(defilerTemps, 1000);
-};
-
-const reset = () => {
-    chrono.textContent = "00:00:00";
-    estArrete = true;
-    heures = 0;
-    minutes = 0;
-    secondes = 0;
-    clearTimeout(timeout);
-};
-
-// startBtn.addEventListener("click", demarrer);
-// stopBtn.addEventListener("click", arreter);
-// resetBtn.addEventListener("click", reset);
-
-
-
-
-
+//###################################################################################################################################################################################

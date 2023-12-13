@@ -9,14 +9,6 @@ body{
     padding:0;
 }
 
-.jeu{ /* je pense pas l'utiliser à voir*/
-/* display: flex;
-align-items: center;
-justify-content: center;
-border: solid black 1px;
-background-color: rgb(170, 101, 101); */
-}
-
 img{
     width: 300px;
     height: 350px;
@@ -182,10 +174,26 @@ img{
     display: none;
 }
 
-
-
-/* img[src$="dosDeCarte.jpeg"] {
+.divBtnRESTART{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
-img[src$="img1.difficulterFacile.jpeg"] {
-} */
+
+.btnRESTART{
+    color:#c04d0f;
+    font-weight: bold;
+    font-size: 40px;
+    background-color: #6c3f26;   
+    border: #6c3f267b;
+
+    width: 500px;
+    height: 70px;
+    border-radius: 20px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
