@@ -16,31 +16,41 @@ for (let i = 0; i < devantDeCarteFacileAll.length; i++) {
 
 let dosDeCarteFacileAll = document.querySelectorAll(".dosDeCarteFacile")
 
+let input1 = document.querySelector("input")
 
 let btnAll = document.querySelectorAll("button")
 
 let btnGO = btnAll[0]
 
-let input1 = document.querySelector("input")
-// console.log(input1);
-let h3_1 = document.querySelector("h3")
-// console.log(h3_1);
-let h1_2 = document.querySelectorAll("h1")[1]
-// console.log(h1_2);
+// pour faire des ajouts a chaque fois des joueurs
+let h2TableauDesScoresAll=document.querySelectorAll("h2")
+let h2TableauDesScores1=h2TableauDesScoresAll[0]
 
+// 
+
+
+let tableauDesScores=document.querySelector(".tableauDesScores")
 let difficuterDeJeu = document.querySelector(".difficuterDeJeu")
 
-let divChrono=document.querySelector("#divChrono")
 
 btnGO.addEventListener("click", function () {
-    let vP = input1.value
-    h3_1.innerHTML = vP;
-    h3_1.style.color="rgb(170, 115, 48)"
-    h3_1.style.fontSize="50px"
 
-    h1_2.style.display = "flex"
-    divChrono.style.display = "flex"
+    tableauDesScores.style.display="flex"
     difficuterDeJeu.style.display = "flex"
+
+    let h3PseudoNew= document.createElement("h3")
+    let vP = input1.value
+    h3PseudoNew.innerHTML = vP;
+    let texteH3PseudoNew= document.createTextNode("")
+    h3PseudoNew.appendChild(texteH3PseudoNew)
+    h2TableauDesScores1.appendChild(h3PseudoNew)
+    h3PseudoNew.style.color="#d65915"
+    h3PseudoNew.style.color="#d65915"
+    h3PseudoNew.style.fontSize="35px"
+    h3PseudoNew.style.margin="0"
+    h3PseudoNew.style.padding="0"
+
+    h3PseudoNew.style.textAlign="center"
 })
 
 let btnFacile = btnAll[1]
@@ -49,6 +59,7 @@ let btnNormal = btnAll[2]
 // console.log(btnNormal);
 let btnDifficile = btnAll[3]
 // console.log(btnDifficile);
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -61,15 +72,21 @@ let tabStockerVariable = []
 let compteurRécup6=0
 
 
+let h3ChronoNew
+
 btnFacile.addEventListener("click", function () {
 
+
+    demarrer()
+    
+
     difficuterDeJeu.style.display = "none"
-    console.log("testtt");
-    console.log(tabStockerVariable);
-    console.log(tabStockerSrc);
+
+    
     dosDeCarteFacileAll.forEach(element => {
         element.style.display = "flex"
     });
+
 })
 
 dosDeCarteFacileAll.forEach(element => {
@@ -108,7 +125,6 @@ dosDeCarteFacileAll.forEach(element => {
             stop = true
 
             if (tabStockerSrc[0] == tabStockerSrc[1]) {
-                console.log("juste");
                 tabStockerVariable.forEach(element => {
                     element.style.border = "#ffe433 20px solid"
                 });
@@ -127,13 +143,26 @@ dosDeCarteFacileAll.forEach(element => {
                         tabStockerVariable = []
                         stop = false
                         compteur = 0
-                        difficuterDeJeu.style.display = "flex"
-                    },1000)
+
+                        arreter()
+                        console.log(h3ChronoNew);
+
+
+                        // ! de base ici il est en flex
+                        // difficuterDeJeu.style.display = "flex"
+                        // ! j'ai mis en none puis en dessous 
+                        dosDeCarteFacileAll.forEach(element => {
+                            element.style.display="none"
+                        });
+                        difficuterDeJeu.style.display = "none"
+                        // return 
+                        
+                        // reset()
+                    },1000) 
                 }
 
             } else {
                 tabStockerVariable.forEach(element => {
-                    // element.style.display = 'flex'
                     element.style.border = "#a70b0b 20px solid"
                     console.log(element);
                     console.log(element.previousElementSibling);
@@ -145,9 +174,6 @@ dosDeCarteFacileAll.forEach(element => {
 
             }
             tabStockerSrc = []
-            console.log("test");
-            console.log(tabStockerSrc);
-            console.log(tabStockerVariable);
             tabStockerVariable = []
             compteur = 0
             setTimeout(()=>{
@@ -162,11 +188,13 @@ dosDeCarteFacileAll.forEach(element => {
 });
 
 
+
 // Chronometre
-let chrono = document.getElementById("chrono");
-let resetBtn = document.getElementById("reset");
-let stopBtn = document.getElementById("stop");
+// let chrono = document.getElementById("chrono");
+// let resetBtn = document.getElementById("reset");
+// let stopBtn = document.getElementById("stop");
 // let startBtn = document.getElementById("start");
+
 
 let heures = 0;
 let minutes = 0;
@@ -239,10 +267,6 @@ const reset = () => {
 // startBtn.addEventListener("click", demarrer);
 // stopBtn.addEventListener("click", arreter);
 // resetBtn.addEventListener("click", reset);
-
-btnFacile.addEventListener("click", demarrer);
-
-
 
 
 
