@@ -102,23 +102,6 @@ img{
     font-size: 40px;
 }
 
-/* en pause le temps de voir si */
-#divChrono {
-    /* width: 350px;
-    display: flex;
-    align-items: center;
-    padding-bottom: 50px; */
-
-
-    /* ici je laisse en commentaire */
-    /* display: none; */
-}
-
-/* #chrono {
-    font-size: 40px;
-    color:#381c0d
-} */
-
 
 /* difficuter de jeu */
 .difficuterDeJeu{
@@ -146,7 +129,7 @@ img{
 
 /* plateau de jeu: difficulter facile */
 .plateauDeJeuDifficulterFacile{
-
+/* pour l'instant vide (car j'ai pas rajouter normal et difficile) */
 }
 
 .divDispositionDifficulterFacile{
@@ -154,14 +137,6 @@ img{
     align-items: center;
     justify-content: center;
 }
-
-
-
-
-/* .plateauDeJeuDifficulterFacile{
-    display: flex;
-} */
-
 
 /* Pour là partie FACILE (! voir si je vais pas le séparer pour les autre difficulter)*/
 
@@ -179,21 +154,4 @@ img{
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
-}
-
-
-.btnRESTART{
-    color:#c04d0f;
-    font-weight: bold;
-    font-size: 40px;
-    background-color: #6c3f26;   
-    border: #6c3f267b;
-
-    width: 500px;
-    height: 70px;
-    border-radius: 20px;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    display: none;
 }
