@@ -95,7 +95,15 @@ btnFacile.addEventListener("click", function () {
     h3ChronoNew.style.textAlign="center"
     demarrer()
     
-
+    let h3NiveauNew= document.createElement("h3")
+    let texteH3NiveauNew= document.createTextNode("Facile")
+    h3NiveauNew.appendChild(texteH3NiveauNew)
+    h2TableauDesScores3.appendChild(h3NiveauNew)
+    h3NiveauNew.style.color="#d65915"
+    h3NiveauNew.style.color="#d65915"
+    h3NiveauNew.style.fontSize="35px"
+    h3NiveauNew.style.margin="0"
+    h3NiveauNew.style.padding="0"
     
     h3NiveauNew.style.textAlign="center"
 
