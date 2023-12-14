@@ -42,8 +42,10 @@ btnGO.addEventListener("click", function () {
 
     tableauDesScores.style.display = "flex"
     difficuterDeJeu.style.display = "flex"
-    input1.style.display="flex"
-    btnGO.style.display="block"
+    // input1.style.display="flex"
+    // btnGO.style.display="block"
+    input1.style.display="none"
+    btnGO.style.display="none"
 
     let h3PseudoNew = document.createElement("h3")
     let vP = input1.value
