@@ -1,6 +1,5 @@
 
 body{
-    /* background-image: url(../img/imgok.jpeg); */
     background-color: #ffffff;
     background: linear-gradient(to bottom right, #362b15, #e5ba95);
 
@@ -14,7 +13,6 @@ body{
 img{
     width: 300px;
     height: 350px;
-    /* border: 5px black solid; */
     border-radius: 20px;
     margin-right: 35px;
     margin-left: 35px;
@@ -23,7 +21,6 @@ img{
     background-color: #4a2a18;
 }
 
-/* titre */
 .titre{
     color:#3e1f0de8;
     font-size: 80px;
@@ -32,7 +29,6 @@ img{
     justify-content: center;
 }
 
-/* nom d'utilisateur */
 .nomDutilisateur{
     display: flex;
     align-items: center;
@@ -52,7 +48,6 @@ img{
     background-color: #6c3f26;   
     border:#6c3f26 solid;
 
-    /* margin:0 */
     margin-right: 25px;
     padding-left: 20px;
 
@@ -78,9 +73,7 @@ img{
 }
 
 
-/* tableau des scores */
 .tableauDesScores{
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;    
@@ -91,7 +84,6 @@ img{
     color:#3e1f0de8;
     margin-bottom:0;
     font-size: 70px;
-    /* align-items: center; */
 }
 .divPrincipaleTableauDesScores{
     display: flex;
@@ -108,13 +100,11 @@ img{
     display: block;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     margin-right: 40px;
     margin-left: 40px;
 }
 
 
-/* difficuter de jeu */
 .difficuterDeJeu{
     align-items: center;
     justify-content: center;
@@ -142,7 +132,7 @@ img{
 /* Plateau de jeu: difficulter facile */
 
 .plateauDeJeuDifficulterFacile{
-/* pour l'instant vide (car j'ai pas rajouter normal et difficile) */
+/* pour l'instant vide (car je n'ai pas rajouté normal et difficile)  (en +) */ 
 }
 
 .divDispositionDifficulterFacile{
@@ -151,9 +141,7 @@ img{
     justify-content: center;
 }
 
-/* Pour là partie FACILE (! voir si je vais pas le séparer pour les autre difficulter)*/
 
-/* la personne existe pour le moment */
 .dosDeCarteFacile{
     display: none; 
     cursor: pointer;

@@ -22,7 +22,7 @@ let btnAll = document.querySelectorAll("button")
 
 let btnGO = btnAll[0]
 
-// pour faire des ajouts a chaque fois des joueurs
+// pour faire des ajouts à chaque fois des joueurs
 let h2TableauDesScoresAll = document.querySelectorAll("h2")
 let h2TableauDesScores1 = h2TableauDesScoresAll[0]
 let h2TableauDesScores2 = h2TableauDesScoresAll[1]
@@ -87,7 +87,6 @@ let tabStockerVariable = []
 let compteurRécup6 = 0
 
 
-// Pour mon chrono (j'ai stocker dehors car sinon je peu pas l'utiliser où je souhaite)
 let monIntervalChrono
 
 
@@ -97,11 +96,6 @@ btnFacile.addEventListener("click", function () {
     let compteurSeconde = 0
     let compteurMinute = 0
     let compteurHeure = 0
-
-    // (ici de base j'avais mis ma fct dedans pour pouvoir voir le resultat Mais je la décompose pour pouvoir l'utiliser autrement)
-    // setInterval(function () {
-
-    // },1000)
 
     function fctChrono() {
         compteurSeconde++
@@ -118,9 +112,7 @@ btnFacile.addEventListener("click", function () {
             compteurHeure = 0
         }
 
-        // il fct
         // console.log(`${compteurHeure}:${compteurMinute}:${compteurSeconde}`);
-        // l'afficher à l'endroit souhaiter 
         texteH3ChronoNew.textContent = `${compteurHeure}:${compteurMinute}:${compteurSeconde}` // textContent fct ! (innerHTML NON !)
         
     }
@@ -128,7 +120,7 @@ btnFacile.addEventListener("click", function () {
 
 
     let h3ChronoNew = document.createElement("h3")
-    let texteH3ChronoNew = document.createTextNode("") // j'ai crée son emplacement dont j'ai intégrer dans ma fonction (car si je le fais ici il aura 0:0:0 mais là bah sa va fonctionner)
+    let texteH3ChronoNew = document.createTextNode("") // J'ai créé son emplacement dont j'ai intégré dans ma fonction (car si je le fais ici il aura 0: 0: 0 mais là bah ça va fonctionner)
     h3ChronoNew.appendChild(texteH3ChronoNew)
     h2TableauDesScores2.appendChild(h3ChronoNew)
     h3ChronoNew.style.color = "#e7ab7d"
@@ -144,7 +136,7 @@ btnFacile.addEventListener("click", function () {
 
 
     // activation de mon chrono
-    monIntervalChrono=setInterval(fctChrono, 1000);  // je lui est doner un nom car ici je l'active mais je veux une fin donc je la clear là où je souhaite (+bas)
+    monIntervalChrono=setInterval(fctChrono, 1000);  // je lui ai donner un nom car ici je l'active mais je veux une fin donc je la clear là où je souhaite (+bas)
 
 
 
